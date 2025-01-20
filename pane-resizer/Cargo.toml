@@ -2,6 +2,10 @@
 name = "pane-resizer"
 version = "0.1.0"
 edition = "2021"
+description = "A simple pane resizer for Leptos"
+license = "MIT"
+readme = "../README.md"
+repository = "https://github.com/jonsaw/pane-resizer"
 
 [dependencies]
 leptos = { version = "0.7" }
