@@ -10,6 +10,10 @@ pub fn PaneResizer(#[prop(into, optional)] class: String, children: Children) ->
         ctx.resizing.set(true);
     };
 
+    let handle_on_touchstart = move |_| {
+        ctx.resizing.set(true);
+    };
+
     view! {
         <div
             node_ref=ctx.resizer_ref
@@ -18,6 +22,7 @@ pub fn PaneResizer(#[prop(into, optional)] class: String, children: Children) ->
             style:user-select="none"
             style:touch-action="none"
             on:mousedown=handle_on_mousedown
+            on:touchstart=handle_on_touchstart
         >
             {children()}
         </div>

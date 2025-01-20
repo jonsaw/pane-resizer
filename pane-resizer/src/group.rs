@@ -1,4 +1,8 @@
-use leptos::{context::Provider, ev::mouseup, prelude::*};
+use leptos::{
+    context::Provider,
+    ev::{mouseup, touchend},
+    prelude::*,
+};
 use leptos_use::{use_document, use_event_listener, use_mouse_in_element, UseMouseInElementReturn};
 
 use crate::{context::PaneResizerContext, Style};
@@ -51,6 +55,10 @@ pub fn PaneGroup(
     };
 
     let _ = use_event_listener(use_document(), mouseup, move |_| {
+        ctx.resizing.set(false);
+    });
+
+    let _ = use_event_listener(use_document(), touchend, move |_| {
         ctx.resizing.set(false);
     });
 
