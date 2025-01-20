@@ -21,8 +21,6 @@ use icons::DotsSixVertical;
 use leptos::prelude::*;
 use pane_resizer::{Pane, PaneGroup, PaneResizer};
 
-pub mod icons;
-
 fn main() {
     leptos::mount::mount_to_body(|| {
         view! {
