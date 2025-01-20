@@ -1,0 +1,11 @@
+[package]
+name = "pane-resizer-demo"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+leptos = { version = "0.7", features = ["csr"] }
+pane-resizer = { path = "./pane-resizer" }
+
+[workspace]
+members = ["pane-resizer"]

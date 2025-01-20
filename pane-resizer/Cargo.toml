@@ -1,0 +1,8 @@
+[package]
+name = "pane-resizer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+leptos = { version = "0.7" }
+leptos-use = { version = "0.15" }
