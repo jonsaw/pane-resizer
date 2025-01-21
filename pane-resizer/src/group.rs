@@ -1,6 +1,6 @@
 use leptos::{
     context::Provider,
-    ev::{mouseup, touchend},
+    ev::{contextmenu, mouseup, touchend},
     prelude::*,
 };
 use leptos_use::{use_document, use_event_listener, use_mouse_in_element, UseMouseInElementReturn};
@@ -59,6 +59,10 @@ pub fn PaneGroup(
     });
 
     let _ = use_event_listener(use_document(), touchend, move |_| {
+        ctx.resizing.set(false);
+    });
+
+    let _ = use_event_listener(use_document(), contextmenu, move |_| {
         ctx.resizing.set(false);
     });
 
