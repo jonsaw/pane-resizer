@@ -15,9 +15,9 @@ fn main() {
                             <span class="font-semibold">"Left"</span>
                         </div>
                     </Pane>
-                    <PaneResizer class="relative flex w-2 items-center justify-center bg-background">
+                    <PaneResizer class="relative flex w-2 items-center justify-center bg-background [&>div]:data-[resizing=true]:bg-active">
                         <div class="z-10 flex h-7 w-5 items-center justify-center rounded-sm border bg-brand">
-                            <DotsSixVertical class="size-4 bg-brand text-black" />
+                            <DotsSixVertical class="size-4 text-black" />
                         </div>
                     </PaneResizer>
                     <Pane default_size=60.0 class="rounded-lg bg-muted">
@@ -34,7 +34,7 @@ fn main() {
                             <span class="font-semibold">"Top"</span>
                         </div>
                     </Pane>
-                    <PaneResizer class="relative flex h-2 items-center justify-center bg-background">
+                    <PaneResizer class="relative flex h-2 items-center justify-center bg-background [&>div]:data-[resizing=true]:bg-active">
                         <div class="z-10 flex h-5 w-7 items-center justify-center rounded-sm border bg-brand">
                             <DotsSixVertical class="size-4 text-black" />
                         </div>
@@ -53,7 +53,7 @@ fn main() {
                             <span class="font-semibold">"One"</span>
                         </div>
                     </Pane>
-                    <PaneResizer class="relative flex w-2 items-center justify-center bg-background">
+                    <PaneResizer class="relative flex w-2 items-center justify-center bg-background [&>div]:data-[resizing=true]:bg-active">
                         <div class="z-10 flex h-7 w-5 items-center justify-center rounded-sm border bg-brand">
                             <DotsSixVertical class="size-4 text-black" />
                         </div>
@@ -65,7 +65,7 @@ fn main() {
                                     <span class="font-semibold">"Two"</span>
                                 </div>
                             </Pane>
-                            <PaneResizer class="relative flex h-2 items-center justify-center bg-background">
+                            <PaneResizer class="relative flex h-2 items-center justify-center bg-background [&>div]:data-[resizing=true]:bg-active">
                                 <div class="z-10 flex h-5 w-7 items-center justify-center rounded-sm border bg-brand">
                                     <DotsSixVertical class="size-4 text-black" />
                                 </div>

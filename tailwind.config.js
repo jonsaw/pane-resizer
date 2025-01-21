@@ -9,6 +9,7 @@ const config = {
     colors: {
       brand: "#00ff00",
       muted: "#f0f0f0",
+      active: "#00cbff",
     },
   },
 };
