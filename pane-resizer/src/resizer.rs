@@ -23,6 +23,7 @@ pub fn PaneResizer(#[prop(into, optional)] class: String, children: Children) ->
             style:touch-action="none"
             on:mousedown=handle_on_mousedown
             on:touchstart=handle_on_touchstart
+            data-resizing=move || if ctx.resizing.get() { "true" } else { "false" }
         >
             {children()}
         </div>
