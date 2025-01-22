@@ -2,6 +2,7 @@ use leptos::prelude::*;
 use leptos_router::{components::*, path};
 use pages::*;
 
+pub mod components;
 pub mod icons;
 pub mod pages;
 

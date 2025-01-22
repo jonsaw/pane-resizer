@@ -818,6 +818,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "jspackages"
+version = "0.1.1"
+dependencies = [
+ "wasm-bindgen",
+]
+
+[[package]]
 name = "lazy_static"
 version = "1.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -950,6 +957,57 @@ dependencies = [
  "server_fn_macro",
  "syn",
  "uuid",
+]
+
+[[package]]
+name = "leptos_meta"
+version = "0.7.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7250991b2077ef5869e999c74cf4990926a3c3919b50c9937e101c1c874102db"
+dependencies = [
+ "futures",
+ "indexmap",
+ "leptos",
+ "once_cell",
+ "or_poisoned",
+ "send_wrapper",
+ "wasm-bindgen",
+ "web-sys",
+]
+
+[[package]]
+name = "leptos_router"
+version = "0.7.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9a193dbd62b9617a5d7d199ea70c570da01a1bbe798e617373b6351845be6778"
+dependencies = [
+ "any_spawner",
+ "either_of",
+ "futures",
+ "gloo-net",
+ "js-sys",
+ "leptos",
+ "leptos_router_macro",
+ "once_cell",
+ "or_poisoned",
+ "reactive_graph",
+ "send_wrapper",
+ "tachys",
+ "thiserror 2.0.11",
+ "url",
+ "wasm-bindgen",
+ "web-sys",
+]
+
+[[package]]
+name = "leptos_router_macro"
+version = "0.7.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "34bc3f80ad810b22058f12d278bb0bf929779cc0bc1289a06980d896f62743f0"
+dependencies = [
+ "proc-macro-error2",
+ "proc-macro2",
+ "quote",
 ]
 
 [[package]]
@@ -1116,7 +1174,11 @@ dependencies = [
 name = "pane-resizer-demo"
 version = "0.1.1"
 dependencies = [
+ "jspackages",
  "leptos",
+ "leptos-use",
+ "leptos_meta",
+ "leptos_router",
  "pane-resizer",
 ]
 
