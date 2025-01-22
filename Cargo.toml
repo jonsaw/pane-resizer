@@ -5,6 +5,9 @@ edition = "2021"
 
 [dependencies]
 leptos = { version = "0.7", features = ["csr"] }
+leptos_meta = { version = "0.7" }
+leptos_router = { version = "0.7" }
+leptos-use = { version = "0.15" }
 pane-resizer = { path = "./pane-resizer" }
 
 [workspace]
