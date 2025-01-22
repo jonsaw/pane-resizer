@@ -2,7 +2,7 @@
 
 A simple pane resizer for your Leptos apps.
 
-[See](https://jonsaw.github.io/pane-resizer/) resizers in action.
+[See demo](https://pane-resizer.vercel.app/) resizers in action.
 
 ## Getting Started
 
