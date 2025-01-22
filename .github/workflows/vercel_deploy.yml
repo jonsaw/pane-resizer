@@ -17,6 +17,18 @@ jobs:
       - name: git-checkout
         uses: actions/checkout@v3
 
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: make jspackages-install
+
+      - name: Build JS packages
+        run: make jspackages-build
+
+      - name: Build tailwindcss
+        run: make tailwindcss-build
+
       - uses: dtolnay/rust-toolchain@nightly
         with:
           components: clippy, rustfmt
@@ -29,18 +41,6 @@ jobs:
 
       - name: Download and install Trunk binary
         run: wget -qO- https://github.com/trunk-rs/trunk/releases/download/v0.18.2/trunk-x86_64-unknown-linux-gnu.tar.gz | tar -xzf-
-
-      - name: Install pnpm
-        run: npm install -g pnpm
-
-      - name: Install dependencies
-        run: make jspackages-install
-
-      - name: Build JS packages
-        run: make jspackages-build
-
-      - name: Build tailwindcss
-        run: make tailwindcss-build
 
       - name: Build with Trunk
         run: ./trunk build --release
