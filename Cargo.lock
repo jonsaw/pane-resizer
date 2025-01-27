@@ -831,7 +831,7 @@ dependencies = [
 
 [[package]]
 name = "jspackages"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "wasm-bindgen",
 ]
@@ -1176,7 +1176,7 @@ checksum = "8c04f5d74368e4d0dfe06c45c8627c81bd7c317d52762d118fb9b3076f6420fd"
 
 [[package]]
 name = "pane-resizer"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "leptos",
  "leptos-use",
@@ -1184,7 +1184,7 @@ dependencies = [
 
 [[package]]
 name = "pane-resizer-docs"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "biji-ui",
  "jspackages",
