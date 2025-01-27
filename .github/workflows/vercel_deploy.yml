@@ -21,6 +21,9 @@ jobs:
         run: npm install -g pnpm
 
       - name: Install dependencies
+        run: make install
+
+      - name: Install JS packages dependencies
         run: make jspackages-install
 
       - name: Build JS packages
