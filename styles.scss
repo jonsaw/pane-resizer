@@ -62,6 +62,13 @@
         line-height: var(--text-2xl--line-height);
         margin-bottom: 1rem;
     }
+
+    p {
+        color: var(--color-text);
+        font-size: var(--text-base);
+        line-height: var(--text-base--line-height);
+        margin-bottom: 1rem;
+    }
 }
 
 .pane {
