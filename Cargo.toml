@@ -4,6 +4,7 @@ version = "0.1.1"
 edition = "2021"
 
 [dependencies]
+biji-ui = "0.2.0"
 leptos = { version = "0.7", features = ["csr"] }
 leptos_meta = { version = "0.7" }
 leptos_router = { version = "0.7" }

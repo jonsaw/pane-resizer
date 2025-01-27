@@ -1,3 +1,21 @@
+pub mod align_justify;
+pub mod book_text;
+pub mod bug;
+pub mod check;
 pub mod dots_six_vertical;
+pub mod github;
+pub mod moon;
+pub mod sun;
+pub mod sun_moon;
+pub mod x;
 
+pub use align_justify::AlignJustify;
+pub use book_text::BookText;
+pub use bug::Bug;
+pub use check::Check;
 pub use dots_six_vertical::DotsSixVertical;
+pub use github::Github;
+pub use moon::Moon;
+pub use sun::Sun;
+pub use sun_moon::SunMoon;
+pub use x::X;
