@@ -5,15 +5,11 @@ use pane_resizer::*;
 use crate::icons::DotsSixVertical;
 
 #[component]
-pub fn IntroPage() -> impl IntoView {
+pub fn NestedGroupsExamplePage() -> impl IntoView {
     view! {
-        <Title text="Introduction" />
+        <Title text="Nested Groups Example" />
         <article class="flex h-full flex-col pt-16 pb-10 m-4 md:m-8">
-            <h1>"Introduction"</h1>
-            <p class="mb-4">
-                "Pane Resizer is a simple and lightweight component that allows you to resize panes horizontally or vertically. It is designed to be flexible and easy to use."
-            </p>
-            <p class="mb-2">"Here's an example:"</p>
+            <h1>"Nested Groups"</h1>
             <div>
                 <PaneGroup class="w-full">
                     <Pane default_size=50.0 class="pane rounded-lg">

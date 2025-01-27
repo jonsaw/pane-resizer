@@ -14,6 +14,18 @@ fn main() {
                     <Route path=path!("/") view=|| view! { <Redirect path="/docs/intro" /> } />
                     <ParentRoute path=path!("/docs") view=DocsScaffold>
                         <Route path=path!("/intro") view=|| view! { <IntroPage /> } />
+                        <Route
+                            path=path!("/horizontal-group")
+                            view=|| view! { <HorizontalGroupExamplePage /> }
+                        />
+                        <Route
+                            path=path!("/vertical-group")
+                            view=|| view! { <VerticalGroupExamplePage /> }
+                        />
+                        <Route
+                            path=path!("/nested-groups")
+                            view=|| view! { <NestedGroupsExamplePage /> }
+                        />
                     </ParentRoute>
                 </Routes>
             </Router>

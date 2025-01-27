@@ -22,7 +22,7 @@ pub fn DocsScaffold() -> impl IntoView {
                     <SidebarNav class="hidden lg:block lg:mt-10" />
                 </div>
             </header>
-            <main class="mt-16">
+            <main class="mt-15">
                 <Outlet />
             </main>
         </div>
@@ -143,10 +143,10 @@ pub fn SidebarNav(#[prop(into, optional)] class: String) -> impl IntoView {
 
     let introduction = [("/docs/intro", "Introduction")];
 
-    let components = [
-        ("/docs/pane-group", "PaneGroup"),
-        ("/docs/pane", "Pane"),
-        ("/docs/pane-resizer", "PaneResizer"),
+    let examples = [
+        ("/docs/horizontal-group", "Horizontal Group"),
+        ("/docs/vertical-group", "Vertical Group"),
+        ("/docs/nested-groups", "Nested Groups"),
     ];
 
     let dialog_ctx = use_context::<DialogContext>();
@@ -213,11 +213,9 @@ pub fn SidebarNav(#[prop(into, optional)] class: String) -> impl IntoView {
                     </ul>
                 </li>
                 <li class="relative mt-6">
-                    <h2 class="text-xs font-semibold text-zinc-900 dark:text-white">
-                        "Components"
-                    </h2>
+                    <h2 class="text-xs font-semibold text-zinc-900 dark:text-white">"Examples"</h2>
                     <ul class="border-l border-transparent">
-                        {components
+                        {examples
                             .into_iter()
                             .map(|(path, title)| {
                                 view! {
