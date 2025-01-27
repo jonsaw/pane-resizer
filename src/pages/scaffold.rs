@@ -157,7 +157,7 @@ pub fn SidebarNav(#[prop(into, optional)] class: String) -> impl IntoView {
                 <li class="md:hidden">
                     <a
                         class="block flex py-1 text-sm text-zinc-600 transition dark:text-zinc-400 dark:hover:text-white hover:text-zinc-900"
-                        href="https://docs.rs/biji-ui/latest/biji_ui/"
+                        href="https://docs.rs/pane-resizer/latest/pane_resizer/"
                     >
                         "Documentation"
                     </a>
