@@ -193,8 +193,8 @@ pub fn SidebarNav(#[prop(into, optional)] class: String) -> impl IntoView {
                                         <a
                                             href=path
                                             class="flex justify-between gap-2 py-1 pl-4 pr-3 text-sm text-zinc-600 transition dark:text-zinc-400 dark:hover:text-white hover:text-zinc-900"
-                                            class:font-medium=move || {
-                                                location.pathname.get() == path
+                                            style:font-weight=move || {
+                                                if location.pathname.get() == path { "500" } else { "400" }
                                             }
 
                                             on:click=move |_| {
@@ -223,8 +223,8 @@ pub fn SidebarNav(#[prop(into, optional)] class: String) -> impl IntoView {
                                         <a
                                             href=path
                                             class="flex justify-between gap-2 py-1 pl-4 pr-3 text-sm text-zinc-600 transition dark:text-zinc-400 dark:hover:text-white hover:text-zinc-900"
-                                            class:font-medium=move || {
-                                                location.pathname.get() == path
+                                            style:font-weight=move || {
+                                                if location.pathname.get() == path { "500" } else { "400" }
                                             }
 
                                             on:click=move |_| {
