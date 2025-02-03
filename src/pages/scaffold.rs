@@ -8,6 +8,11 @@ use leptos_use::use_media_query;
 use crate::{components::ThemeMode, icons};
 
 #[component]
+pub fn EmptyScaffold() -> impl IntoView {
+    view! { <Outlet /> }
+}
+
+#[component]
 pub fn DocsScaffold() -> impl IntoView {
     view! {
         <div class="h-full lg:ml-72 xl:ml-80">
@@ -144,9 +149,9 @@ pub fn SidebarNav(#[prop(into, optional)] class: String) -> impl IntoView {
     let introduction = [("/docs/intro", "Introduction")];
 
     let examples = [
-        ("/docs/horizontal-group", "Horizontal Group"),
-        ("/docs/vertical-group", "Vertical Group"),
-        ("/docs/nested-groups", "Nested Groups"),
+        ("/docs/examples/horizontal-group", "Horizontal Group"),
+        ("/docs/examples/vertical-group", "Vertical Group"),
+        ("/docs/examples/nested-groups", "Nested Groups"),
     ];
 
     let dialog_ctx = use_context::<DialogContext>();

@@ -2,10 +2,23 @@ use leptos::prelude::*;
 use leptos_meta::Title;
 use pane_resizer::*;
 
-use crate::icons::DotsSixVertical;
+use crate::{components::Code, icons::DotsSixVertical};
 
 #[component]
 pub fn VerticalGroupExamplePage() -> impl IntoView {
+    let example_code = r#"
+    use leptos::prelude::*;
+    use pane_resizer::*;
+
+    #[component]
+    pub fn HorizontalGroupExample() -> impl IntoView {
+        <PaneGroup direction=Direction::Vertical>
+            <Pane default_size=50.0 />
+            <PaneResizer />
+            <Pane default_size=50.0 />
+        </PaneGroup>
+    }"#;
+
     view! {
         <Title text="Vertical Group Example" />
         <article class="flex h-full flex-col pt-16 pb-10 m-4 md:m-8">
@@ -29,6 +42,13 @@ pub fn VerticalGroupExamplePage() -> impl IntoView {
                     </Pane>
                 </PaneGroup>
             </div>
+            <h2 class="mt-8">"Anatomy"</h2>
+            <p>"Here's the high-level structure of the example above:"</p>
+            <Code
+                code=example_code
+                language="rust"
+                class="[&>.shiki]:overflow-x-auto [&>.shiki]:p-4 [&>.shiki]:rounded-lg [&>.shiki]:text-sm"
+            />
         </article>
     }
 }
