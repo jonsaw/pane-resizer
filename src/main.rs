@@ -1,4 +1,5 @@
 use leptos::prelude::*;
+use leptos_meta::provide_meta_context;
 use leptos_router::{components::*, path};
 use pages::*;
 
@@ -8,6 +9,7 @@ pub mod pages;
 
 fn main() {
     leptos::mount::mount_to_body(|| {
+        provide_meta_context();
         view! {
             <Router>
                 <Routes fallback=|| "Not found.">
