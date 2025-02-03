@@ -11,7 +11,7 @@ pub fn VerticalGroupExamplePage() -> impl IntoView {
     use pane_resizer::*;
 
     #[component]
-    pub fn HorizontalGroupExample() -> impl IntoView {
+    pub fn VerticalGroupExamplePage() -> impl IntoView {
         <PaneGroup direction=Direction::Vertical>
             <Pane default_size=50.0 />
             <PaneResizer />
