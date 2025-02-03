@@ -13,7 +13,7 @@ jspackages-build:
 	pnpm run --prefix ./jspackages build
 
 tailwindcss-build:
-	npx tailwindcss -i ./styles.scss -o ./diststyles/styles.css
+	npx tailwindcss -i ./pane-resizer-docs/styles.scss -o ./diststyles/styles.css
 
 tailwindcss-watch:
-	npx tailwindcss -i ./styles.scss -o ./diststyles/styles.css --watch
+	npx tailwindcss -i ./pane-resizer-docs/styles.scss -o ./diststyles/styles.css --watch

@@ -1,16 +1,3 @@
-[package]
-name = "pane-resizer-docs"
-version = "0.1.2"
-edition = "2021"
-
-[dependencies]
-biji-ui = "0.2.0"
-leptos = { version = "0.7", features = ["csr"] }
-leptos_meta = { version = "0.7" }
-leptos_router = { version = "0.7" }
-leptos-use = { version = "0.15" }
-pane-resizer = { path = "./pane-resizer" }
-jspackages = { path = "./jspackages" }
-
 [workspace]
-members = ["pane-resizer", "jspackages"]
+resolver = "2"
+members = ["pane-resizer", "pane-resizer-docs", "jspackages"]
