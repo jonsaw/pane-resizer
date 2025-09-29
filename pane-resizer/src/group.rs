@@ -75,19 +75,16 @@ pub fn PaneGroup(
 
             let panes = ctx.panes.get();
 
-            match panes.keys().len() {
-                2 => {
-                    let mut panes = panes.iter();
-                    let (_, first_pane_ctx) = panes.next().unwrap();
-                    let (_, second_pane_ctx) = panes.next().unwrap();
+            if panes.keys().len() == 2 {
+                let mut panes = panes.iter();
+                let (_, first_pane_ctx) = panes.next().unwrap();
+                let (_, second_pane_ctx) = panes.next().unwrap();
 
-                    let first_pane_size = new_size;
-                    let second_pane_size = 100.0 - new_size;
+                let first_pane_size = new_size;
+                let second_pane_size = 100.0 - new_size;
 
-                    first_pane_ctx.size.set(first_pane_size);
-                    second_pane_ctx.size.set(second_pane_size);
-                }
-                _ => {}
+                first_pane_ctx.size.set(first_pane_size);
+                second_pane_ctx.size.set(second_pane_size);
             }
         }
     });
