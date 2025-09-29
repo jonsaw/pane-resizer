@@ -54,6 +54,7 @@ jobs:
     name: Js Packages
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Install pnpm
         run: npm install -g pnpm
 
