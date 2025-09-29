@@ -1,6 +1,6 @@
 [package]
 name = "pane-resizer"
-version = "0.1.2"
+version = "0.2.0"
 edition = "2021"
 description = "A simple pane resizer for Leptos"
 license = "MIT"
@@ -8,5 +8,5 @@ readme = "../README.md"
 repository = "https://github.com/jonsaw/pane-resizer"
 
 [dependencies]
-leptos = { version = "0.7" }
-leptos-use = { version = "0.15" }
+leptos = { version = "0.8" }
+leptos-use = { version = "0.16" }

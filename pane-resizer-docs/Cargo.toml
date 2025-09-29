@@ -1,13 +1,13 @@
 [package]
 name = "pane-resizer-docs"
-version = "0.1.2"
+version = "0.2.0"
 edition = "2021"
 
 [dependencies]
-biji-ui = "0.2.0"
-leptos = { version = "0.7", features = ["csr"] }
-leptos_meta = { version = "0.7" }
-leptos_router = { version = "0.7" }
-leptos-use = { version = "0.15" }
+biji-ui = "0.3.0"
+leptos = { version = "0.8.9", features = ["csr"] }
+leptos_meta = { version = "0.8.5" }
+leptos_router = { version = "0.8.7" }
+leptos-use = { version = "0.16.2" }
 pane-resizer = { path = "../pane-resizer" }
 jspackages = { path = "../jspackages" }
