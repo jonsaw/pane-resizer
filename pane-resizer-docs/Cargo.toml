@@ -5,9 +5,9 @@ edition = "2021"
 
 [dependencies]
 biji-ui = "0.3.0"
-leptos = { version = "0.8.9", features = ["csr"] }
-leptos_meta = { version = "0.8.5" }
-leptos_router = { version = "0.8.7" }
+leptos = { version = "0.8", features = ["csr"] }
+leptos_meta = { version = "0.8" }
+leptos_router = { version = "0.8" }
 leptos-use = { version = "0.16.2" }
 pane-resizer = { path = "../pane-resizer" }
 jspackages = { path = "../jspackages" }
