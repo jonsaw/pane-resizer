@@ -35,7 +35,7 @@ pub fn Code(
 
         let code = if trim { code.trim() } else { &code };
 
-        let code = code_to_html(&code, language, theme);
+        let code = code_to_html(code, language, theme);
 
         set_highlighted.set(code);
     });

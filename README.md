@@ -48,3 +48,10 @@ fn main() {
 }
 
 ```
+
+## Version Compatibility
+
+Pane Resizer | Leptos
+-------------|-------
+0.1.x        | 0.7.x
+0.2.x        | 0.8.x

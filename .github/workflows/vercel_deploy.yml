@@ -10,12 +10,13 @@ env:
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
 jobs:
-  Vercel-Production-Deployment:
+  build-and-deploy:
+    name: Build and Deploy to Production
     runs-on: ubuntu-latest
     environment: production
     steps:
       - name: git-checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install pnpm
         run: npm install -g pnpm
@@ -36,11 +37,18 @@ jobs:
         with:
           components: clippy, rustfmt
       - uses: Swatinem/rust-cache@v2
-      - name: Setup Rust
-        run: |
-          rustup target add wasm32-unknown-unknown
-          cargo clippy
-          cargo fmt --check
+
+      - name: Check formatting
+        run: cargo fmt --check
+
+      - name: Run clippy
+        run: cargo clippy -- -D warnings
+
+      - name: Run tests
+        run: cargo test
+
+      - name: Setup Rust target
+        run: rustup target add wasm32-unknown-unknown
 
       - name: Download and install Trunk binary
         run: wget -qO- https://github.com/trunk-rs/trunk/releases/download/v0.21.7/trunk-x86_64-unknown-linux-gnu.tar.gz | tar -xzf-
@@ -57,9 +65,11 @@ jobs:
       - name: Pull Vercel Environment Information
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
-      - name: Deploy to Vercel & Display URL
+      - name: Deploy to Vercel
         id: deployment
         working-directory: ./dist
         run: |
-          vercel deploy --prod --token=${{ secrets.VERCEL_TOKEN }} >> $GITHUB_STEP_SUMMARY
-          echo $GITHUB_STEP_SUMMARY
+          DEPLOYMENT_URL=$(vercel deploy --prod --token=${{ secrets.VERCEL_TOKEN }})
+          echo "Deployed to Production: $DEPLOYMENT_URL"
+          echo "## 🚀 Production Deployment Complete!" >> $GITHUB_STEP_SUMMARY
+          echo "**URL**: $DEPLOYMENT_URL" >> $GITHUB_STEP_SUMMARY
